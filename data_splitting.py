@@ -2,12 +2,12 @@ import os
 import shutil
 import random
 
-# Define paths
+
 dataset_path = r"C:\Users\KIIT\Documents\Minor\preprocessed"
 output_path = os.path.join(r"C:\Users\KIIT\Documents\Minor", "splitted_data")
 os.makedirs(output_path, exist_ok=True)
 
-# Define split ratios
+
 train_ratio = 0.7
 val_ratio = 0.2
 test_ratio = 0.1

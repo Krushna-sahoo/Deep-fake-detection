@@ -5,7 +5,7 @@ import AboveFooter from "../components/AboveFooter";
 import HowItWorks from "../components/HowItWorks";
 
 const Home = () => {
-  const { modelUrl,isSignUp,setIsSignUp,showLogin,setShowLogin,loggedIn,setloggedIn} = useContext(AppContext); // Get API URL from context
+  const { modelUrl,setShowLogin,loggedIn} = useContext(AppContext); // Get API URL from context
   const [file, setFile] = useState(null);
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState(null);
@@ -17,8 +17,8 @@ const Home = () => {
     if (!loggedIn) {  
       setShowLogin(true);
       return;
-    } 
-    
+    }
+
     if (!file) {
       setError("Please select a video file first.");
       return;
@@ -108,9 +108,9 @@ const Home = () => {
     {result.prediction}
   </span>
 </p>
-      {/* <p className="text-lg">
+      { <p className="text-lg">
         Fake Probability: <span className="font-semibold">{(result.fake_probability * 100).toFixed(2)}%</span>
-      </p> */}
+      </p> }
     </div>
   </div>
 )}
